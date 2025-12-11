@@ -1,0 +1,12 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <h1>Добро пожаловать, {{ user.username }}!</h1>
+    <p>Это главная страница сайта.</p>
+  {% else %}
+    <h1>Добро пожаловать, гость!</h1>
+    <p>Это главная страница сайта.</p>
+  {% endif %}
+{% endblock %}
